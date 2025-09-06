@@ -27,16 +27,11 @@ jobs:
           channel: stable 
           version: 3.35.3
 
-    - name: Where tf is Flutter?
-      run: flutter doctor -v
     - name:  Setup Gradle
       uses: gradle/actions/setup-gradle@v3
     - name: Gradle Wrapper
-      working-directory: ./android
       run: gradle wrapper
     - name: Grant execute permission for gradlew
-      working-directory: ./android
       run: chmod +x gradlew
     - name: Build with Gradle
-      working-directory: ./android
       run: ./gradlew build
