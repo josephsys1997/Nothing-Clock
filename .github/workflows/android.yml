@@ -25,7 +25,7 @@ jobs:
       uses: flutter-actions/setup-flutter@v4
       with:
           channel: stable 
-          cache-path: /usr/local/lib/flutter
+          cache-sdk: /usr/local/lib/flutter
       
     - name:  Setup Gradle
       uses: gradle/actions/setup-gradle@v3
