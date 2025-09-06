@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.joseph.nothing_clock"
+    namespace = "com.sushi.nothing_clock"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = "27.0.12077973"
 
