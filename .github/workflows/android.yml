@@ -10,6 +10,11 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+      pull-requests: write
+      security-events: write
+
     steps:
     - uses: actions/checkout@v4
     - name: set up JDK 17
@@ -17,7 +22,12 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-        
+
+    - name: Setup Flutter SDK
+      uses: flutter-actions/setup-flutter@v4
+      with:
+          channel: stable 
+      
     - name:  Setup Gradle
       uses: gradle/actions/setup-gradle@v3
     - name: Gradle Wrapper
