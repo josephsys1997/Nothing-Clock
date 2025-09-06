@@ -29,7 +29,8 @@ jobs:
 
     - name:  Setup Gradle
       uses: gradle/actions/setup-gradle@v3
-    - name: Check Dependencies
+    - name: Check some baddies
+      run: dart fix --apply
       run: flutter pub upgrade --major-versions
       
     - name: Gradle Wrapper
