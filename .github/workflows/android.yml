@@ -36,7 +36,8 @@ jobs:
       uses: gradle/actions/setup-gradle@v3
     
     
-      
+    - name: basic dumbassing
+      run: ls /home/runner/work/Nothing-Clock
     - name: Gradle Wrapper
       run: gradle wrapper
     - name: Grant execute permission for gradlew
