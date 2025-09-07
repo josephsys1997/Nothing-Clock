@@ -16,6 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
       with:
+        repository: josephsys1997/Nothing-Clock
         path: Nothing-Clock
     - name: set up JDK 17
       uses: actions/setup-java@v4
@@ -39,7 +40,7 @@ jobs:
     
     
     - name: basic dumbassing
-      run: ls /home/runner/work/Nothing-Clock
+      run: $GITHUB_
     - name: Gradle Wrapper
       run: gradle wrapper
     - name: Grant execute permission for gradlew
